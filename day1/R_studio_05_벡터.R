@@ -55,7 +55,7 @@ names(absent) # absent 벡터의 값들의 이름을 확인
 
 absent[0] #안나옴
 absent[1]
-absent[2]
+absent[2]ㄴㄴ
 absent[3]
 absent[4]
 absent[5]
