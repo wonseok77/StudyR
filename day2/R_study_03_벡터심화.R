@@ -60,3 +60,46 @@ d==5
 condi <- d > 5 & d < 8 # 조건을 변수에 저장
 d[condi] # 조건에 맞는 값들을 선택
 
+
+
+# 카페매출분석
+espresso <- c(4, 5, 3, 6, 5, 4, 7)
+americano <- c(63, 68, 64, 68, 72, 89, 94)
+latte <- c(61, 70, 59, 71, 71, 92, 88)
+price <- c(2000, 2500, 3000)
+names(price) <- c('esp','ame','lat')
+sale.espresso <- price['esp'] * espresso
+sale.americano <- price['ame'] * americano
+sale.latte <- price['lat'] * latte
+
+sale.espresso
+sale.americano
+sale.latte
+
+sale.day <- sale.espresso + sale.americano + sale.latte
+names(sale.day) <- c('Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun')
+
+sale.day
+
+sum(sale.day)
+sale.mean <- mean(sale.day)
+names(sale.day[sale.day >= sale.mean])
+
+
+
+cat('총매출액', sum(sale.day), '원')
+sale.sum = sum(sale.day)
+sale.mean = mean(sale.day)
+sale.mean
+
+cat('평균매출액', sale.mean, '원')
+sale.day
+result <- names(sale.day[sale.day >= sale.mean])
+cat('평균매출액보다 매출액이 높은 요일은', result)
+
+
+
+cat('총매출액', sum(sale.day), '원')
+cat('평균매출액', sale.mean, '원')
+cat('평균매출액보다 매출액이 높은 요일은', result)
+
